@@ -1,4 +1,4 @@
-import java.util.Scanner;
+   import java.util.Scanner;
 
 
 public class PayFineUI {
@@ -24,7 +24,7 @@ public class PayFineUI {
 	}
 
 
-	public void run() {
+	public void run() { 
 		output("Pay Fine Use Case UI\n");
 		
 		while (true) {
@@ -32,7 +32,7 @@ public class PayFineUI {
 			switch (state) {
 			
 			case READY:
-				String memStr = input("Swipe member card (press <enter> to cancel): ");
+				String memberString = input("Swipe member card (press <enter> to cancel): "); // change the varibale name from mem to member 
 				if (memStr.length() == 0) {
 					control.cancel();
 					break;
