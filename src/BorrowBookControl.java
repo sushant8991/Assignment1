@@ -106,13 +106,13 @@ public class BorrowBookControl {
 		for (loan loan : COMPLETED) {
 			ui.display(loan.toString());
 		}
-		ui.setState(BorrowBookUI.UI_STATE.COMPLETED);
+		ui.setState(BorrowBookUi.UI_STATE.COMPLETED);
 		state = CONTROL_STATE.COMPLETED;
 	}
 
 	
 	public void cancel() {
-		ui.setState(BorrowBookUI.UI_STATE.CANCELLED);
+		ui.setState(BorrowBookUi.UI_STATE.CANCELLED);
 		state = CONTROL_STATE.CANCELLED;
 	}
 	
