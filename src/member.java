@@ -18,11 +18,10 @@ public class Member implements Serializable {
 
 	
 	public member(String lastName, String firstName, String email, int phoneNo, int id) {
-		this.lastName= lastName;
-		this.FN = firstName;
-		this.EM = email;
-		this.PN = phoneNo;
-		this.ID = id;
+		this.lastName= lastName;      // variable should be meaningful
+		this.firstName = firstName;  // variable should be meaningful
+		this.email = email;         // variable should be meaningful
+		this.id = phoneNo; // variable should be meaningful
 		
 		this.LNS = new HashMap<>();
 	}
