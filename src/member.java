@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Map;
 
 @SuppressWarnings("serial")
-public class member implements Serializable {
+public class Member implements Serializable {
 
-	private String LN;
-	private String FN;
+	private String lastName; // variable should be meaningful
+	private String FN;      
 	private String EM;
 	private int PN;
 	private int ID;
@@ -18,7 +18,7 @@ public class member implements Serializable {
 
 	
 	public member(String lastName, String firstName, String email, int phoneNo, int id) {
-		this.LN = lastName;
+		this.lastName= lastName;
 		this.FN = firstName;
 		this.EM = email;
 		this.PN = phoneNo;
@@ -31,7 +31,7 @@ public class member implements Serializable {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Member:  ").append(ID).append("\n")
-		  .append("  Name:  ").append(LN).append(", ").append(FN).append("\n")
+		  .append("  Name:  ").append(lastName).append(", ").append(FN).append("\n")
 		  .append("  Email: ").append(EM).append("\n")
 		  .append("  Phone: ").append(PN)
 		  .append("\n")
@@ -76,7 +76,7 @@ public class member implements Serializable {
 
 	
 	public String getLastName() {
-		return LN;
+		return lastName;
 	}
 
 	
