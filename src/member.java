@@ -8,9 +8,9 @@ import java.util.Map;
 public class Member implements Serializable {
 
 	private String lastName; // variable should be meaningful
-	private String FN;      
-	private String EM;
-	private int PN;
+	private String firstName;// variable should be meaningful
+	private String Email;   // variable should be meaningful
+	private int Phone;     // variable should be meaningful
 	private int ID;
 	private double FINES;
 	
@@ -32,8 +32,8 @@ public class Member implements Serializable {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Member:  ").append(ID).append("\n")
 		  .append("  Name:  ").append(lastName).append(", ").append(FN).append("\n")
-		  .append("  Email: ").append(EM).append("\n")
-		  .append("  Phone: ").append(PN)
+		  .append("  Email: ").append(Email).append("\n")
+		  .append("  Phone: ").append(phoneNo)
 		  .append("\n")
 		  .append(String.format("  Fines Owed :  $%.2f", FINES))
 		  .append("\n");
