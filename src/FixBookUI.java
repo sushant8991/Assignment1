@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 
-public class FixBookUI {
+public class FixBookUi \\ Since variable has to be in camel case and meaningful(FixBookUI to FixBookUi) 
+{
 
 	public static enum UI_STATE { INITIALISED, READY, FIXING, COMPLETED };
 
@@ -14,7 +15,7 @@ public class FixBookUI {
 		this.control = control;
 		input = new Scanner(System.in);
 		state = UI_STATE.INITIALISED;
-		control.setUI(this);
+		control.setUi(this); \\The name of the method should be in camel case as well(setUI to setUi)
 	}
 
 
@@ -31,7 +32,7 @@ public class FixBookUI {
 			switch (state) {
 			
 			case READY:
-				String bookStr = input("Scan Book (<enter> completes): ");
+					String bookStr = input("Scan Book (<enter> completes): ");
 				if (bookStr.length() == 0) {
 					control.scanningComplete();
 				}
@@ -61,7 +62,7 @@ public class FixBookUI {
 			
 			default:
 				output("Unhandled state");
-				throw new RuntimeException("FixBookUI : unhandled state :" + state);			
+				throw new RuntimeException("FixBookUi : unhandled state :" + state);  \\Changed FixBookUI to FixBookUi		
 			
 			}		
 		}
