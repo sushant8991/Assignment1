@@ -10,7 +10,7 @@ public class BorrowBookUI {
 	private UI_STATE state;
 
 	
-	public BorrowBookUI(BorrowBookControl control) {
+	public borrowBookUi(BorrowBookControl control) {// the name of the method should always start and end with the small letter(BorrowBookUi to borrowBookUi)
 		this.control = control;
 		input = new Scanner(System.in);
 		state = UI_STATE.INITIALISED;
@@ -103,7 +103,7 @@ public class BorrowBookUI {
 				
 			default:
 				output("Unhandled state");
-				throw new RuntimeException("BorrowBookUI : unhandled state :" + state);			
+				throw new RuntimeException("BorrowBookUi : unhandled state :" + state);	// change the BorrowBookUI with iorrowBookUi		
 			}
 		}		
 	}
