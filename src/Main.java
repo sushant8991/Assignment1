@@ -37,7 +37,7 @@ public class Main {
 	}
 
 
-	public static void main(String[] args) {		
+	public static void main(String[] args) {		 
 		try {			
 			IN = new Scanner(System.in);
 			LIB = library.INSTANCE();
@@ -120,7 +120,8 @@ public class Main {
 		output("\nEnded\n");
 	}	
 
-		private static void payFine() {
+	
+	private static void payFine() {
 		new PayFineUI(new PayFineControl()).run();		
 	}
 
