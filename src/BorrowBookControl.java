@@ -5,7 +5,7 @@ public class BorrowBookControl {
 	
 	private BorrowBookUI ui;
 	
-	private library libary; //variable name should be in camle case form and as well as meaningful(L to Libarary)
+	private library library; //variable name should be in camel case form and as well as meaningful(L to Library)
 	private member member; //variable name should be in camle case form and as well as meaningful(M to member)
 	private enum CONTROL_STATE { INITIALISED, READY, RESTRICTED, SCANNING, IDENTIFIED, FINALISING, COMPLETED, CANCELLED };
 	private CONTROL_STATE state;
@@ -16,7 +16,7 @@ public class BorrowBookControl {
 	
 	
 	public BorrowBookControl() {
-		this.libary = libary.INSTANCE();// change the  variable name accoording to its super variable name
+		this.library = library.INSTANCE();// change the  variable name accoording to its super variable name
 		state = CONTROL_STATE.INITIALISED;
 	}
 	
@@ -31,7 +31,7 @@ public class BorrowBookControl {
 	}
 
 		
-	public void Swiped(int memberId) {
+	public void swiped(int memberId) {
 		if (!state.equals(CONTROL_STATE.READY)) 
 			throw new RuntimeException("BorrowBookControl: cannot call cardSwiped except in READY state");
 			
@@ -47,7 +47,7 @@ public class BorrowBookControl {
 		else 
 		{
 			ui.display("Member cannot borrow at this time");
-			ui.setState(BorrowBookUI.UI_STATE.RESTRICTED); }}
+			ui.setState(borrowBookUI.UI_STATE.RESTRICTED); }}
 	
 	
 	public void scanned(int bookId) { //the name of the method must start with the small letter (from Scanned to scanned)
