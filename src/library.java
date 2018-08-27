@@ -51,7 +51,7 @@ public class library implements Serializable {
 		if (self == null) {
 			Path path = Paths.get(LIBRARY_FILE);			
 			if (Files.exists(path)) {	
-				try (ObjectInputStream lof = new ObjectInputStream(new FileInputStream(LIBRARY_FILE));) {
+				try (ObjectInputStream lof = new ObjectInputStream(new FileInputStream(LIBRARY_FILE))) { //there was ";" in between brackets so i removed it.
 			    
 					self = (library) lof.readObject();
 					Calendar.getInstance().setDate(self.loadDate);
