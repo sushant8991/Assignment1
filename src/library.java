@@ -145,7 +145,8 @@ public class library implements Serializable {
 	
 	public book Book(int bookId) {
 		if (catalog.containsKey(bookId)) 
-			return catalog.get(bookId);		
+			return catalog.get(bookId);
+	}          //addition of brackets
 		return null;
 	}
 
