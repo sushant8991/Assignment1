@@ -4,7 +4,7 @@
 public class PayFineUI {
 
 
-	public static enum UI_STATE { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
+	public static enum UI_STATE { INITIALISED, READY, PAYING, COMPLETED, CANCELLED }//remove ;
 
 	private PayFineControl control;
 	private Scanner input;
@@ -56,7 +56,9 @@ public class PayFineUI {
 				try {
 					amount = Double.valueOf(amtStr).doubleValue();
 				}
-				catch (NumberFormatException e) {}
+				catch (NumberFormatException e) {
+				  output("invalid number format");  //addition of statement
+				}
 				if (amount <= 0) {
 					output("Amount must be positive");
 					break;

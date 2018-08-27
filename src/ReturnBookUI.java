@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ReturnBookUI {
 
-	public static enum UI_STATE { INITIALISED, READY, INSPECTING, COMPLETED };
+	public static enum UI_STATE { INITIALISED, READY, INSPECTING, COMPLETED } //remove of ";" 
 
 	private ReturnBookControl control;
 	private Scanner input;
@@ -31,7 +31,7 @@ public class ReturnBookUI {
 			case READY:
 				String bookStr = input("Scan Book (<enter> completes): ");
 				if (bookStr.length() == 0) {
-					control.scanningComplete();
+					returncontrol.scanningComplete(); //adition of return
 				}
 				else {
 					try {

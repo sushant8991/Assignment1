@@ -47,11 +47,11 @@ public class library implements Serializable {
 	}
 
 	
-	public static synchronized library INSTANCE() {		
+	public static synchronized library getINSTANCE() {	//added get to makee it get method	
 		if (self == null) {
 			Path path = Paths.get(LIBRARY_FILE);			
 			if (Files.exists(path)) {	
-				try (ObjectInputStream lof = new ObjectInputStream(new FileInputStream(LIBRARY_FILE));) {
+				try (ObjectInputStream lof = new ObjectInputStream(new FileInputStream(LIBRARY_FILE))) { //there was ";" in between brackets so i removed it.
 			    
 					self = (library) lof.readObject();
 					Calendar.getInstance().setDate(self.loadDate);
@@ -70,7 +70,7 @@ public class library implements Serializable {
 	public static synchronized void SAVE() {
 		if (self != null) {
 			self.loadDate = Calendar.getInstance().Date();
-			try (ObjectOutputStream lof = new ObjectOutputStream(new FileOutputStream(LIBRARY_FILE));) {
+			try (ObjectOutputStream lof = new ObjectOutputStream(new FileOutputStream(LIBRARY_FILE))) { //remove ";" which was in between the brackets.
 				lof.writeObject(self);
 				lof.flush();
 				lof.close();	
@@ -145,7 +145,8 @@ public class library implements Serializable {
 	
 	public book Book(int bookId) {
 		if (catalog.containsKey(bookId)) 
-			return catalog.get(bookId);		
+			return catalog.get(bookId);
+	}          //addition of brackets
 		return null;
 	}
 
@@ -156,17 +157,18 @@ public class library implements Serializable {
 
 	
 	public boolean memberCanBorrow(member member) {		
-		if (member.getNumberOfCurrentLoans() == LOAN_LIMIT ) 
-			return false;
+		if (member.getNumberOfCurrentLoans() == LOAN_LIMIT ) {
+			return false;}
 				
-		if (member.getFinesOwed() >= MAX_FINES_OWED) 
-			return false;
+		if (member.getFinesOwed() >= MAX_FINES_OWED) {
+			return false;}
 				
 		for (loan loan : member.getLoans()) 
-			if (loan.isOverDue()) 
-				return false;
+			if (loan.isOverDue()){ 
+				return false;}
+		{
 			
-		return true;
+		return true;}   //addition of brackets
 	}
 
 	
