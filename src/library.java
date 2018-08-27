@@ -47,7 +47,7 @@ public class library implements Serializable {
 	}
 
 	
-	public static synchronized library getINSTANCE() {		
+	public static synchronized library getINSTANCE() {	//added get to makee it get method	
 		if (self == null) {
 			Path path = Paths.get(LIBRARY_FILE);			
 			if (Files.exists(path)) {	
