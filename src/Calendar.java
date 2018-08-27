@@ -34,7 +34,7 @@ public class Calendar {
 			throw new RuntimeException(e);
 		}	
 	}
-	public synchronized Date Date() {
+	public synchronized Date date() {// method name must be in a camle case form
 		try {
 	        cal.set(java.util.Calendar.HOUR_OF_DAY, 0);  
 	        cal.set(java.util.Calendar.MINUTE, 0);  
@@ -48,7 +48,7 @@ public class Calendar {
 	}
 
 	public synchronized Date getDueDate(int loanPeriod) {
-		Date now = Date();
+		Date now = date();//replaced the Date() with date()
 		cal.add(java.util.Calendar.DATE, loanPeriod);
 		Date dueDate = cal.getTime();
 		cal.setTime(now);
