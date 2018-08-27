@@ -31,7 +31,7 @@ public class ReturnBookUI {
 			case READY:
 				String bookStr = input("Scan Book (<enter> completes): ");
 				if (bookStr.length() == 0) {
-					control.scanningComplete();
+					returncontrol.scanningComplete(); //adition of return
 				}
 				else {
 					try {
