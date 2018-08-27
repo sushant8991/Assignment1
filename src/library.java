@@ -70,7 +70,7 @@ public class library implements Serializable {
 	public static synchronized void SAVE() {
 		if (self != null) {
 			self.loadDate = Calendar.getInstance().Date();
-			try (ObjectOutputStream lof = new ObjectOutputStream(new FileOutputStream(LIBRARY_FILE));) {
+			try (ObjectOutputStream lof = new ObjectOutputStream(new FileOutputStream(LIBRARY_FILE))) { //remove ";" which was in between the brackets.
 				lof.writeObject(self);
 				lof.flush();
 				lof.close();	
