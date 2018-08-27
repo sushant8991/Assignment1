@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ReturnBookUI {
 
-	public static enum UI_STATE { INITIALISED, READY, INSPECTING, COMPLETED };
+	public static enum UI_STATE { INITIALISED, READY, INSPECTING, COMPLETED } //remove of ";" 
 
 	private ReturnBookControl control;
 	private Scanner input;
