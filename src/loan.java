@@ -3,22 +3,24 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @SuppressWarnings("serial")
-public class loan implements Serializable {
+public class Loan implements Serializable { // variable should meaningfull
 	
 	public static enum LOAN_STATE { CURRENT, OVER_DUE, DISCHARGED };
 	
 	private int ID;
-	private book B;
-	private member M;
-	private Date D;
+	private book bookId; // variable should meaningfull
+	private member memberId; // variable should meaningfull
+	private Date date; // variable should meaningfull
 	private LOAN_STATE state;
 
 	
-	public loan(int loanId, book book, member member, Date dueDate) {
+	public loan(int loanId, bookname, membername, DatedueDate) 
+//i changed the book book into bookname member member into membername
+	{
 		this.ID = loanId;
-		this.B = book;
-		this.M = member;
-		this.D = dueDate;
+		this.bookId = book; // variable should meaningfull
+		this.memberId = member; // variable should meaningfull
+		this.date = dueDate; // variable should meaningfull
 		this.state = LOAN_STATE.CURRENT;
 	}
 
@@ -62,12 +64,12 @@ public class loan implements Serializable {
 
 
 	public member Member() {
-		return M;
+		return memberId;
 	}
 
 
 	public book Book() {
-		return B;
+		return bookId;
 	}
 
 

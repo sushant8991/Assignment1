@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Map;
 
 @SuppressWarnings("serial")
-public class member implements Serializable {
+public class Member implements Serializable {
 
-	private String LN;
-	private String FN;
-	private String EM;
-	private int PN;
+	private String lastName; // variable should be meaningful
+	private String firstName;// variable should be meaningful
+	private String Email;   // variable should be meaningful
+	private int Phone;     // variable should be meaningful
 	private int ID;
 	private double FINES;
 	
@@ -18,11 +18,10 @@ public class member implements Serializable {
 
 	
 	public member(String lastName, String firstName, String email, int phoneNo, int id) {
-		this.LN = lastName;
-		this.FN = firstName;
-		this.EM = email;
-		this.PN = phoneNo;
-		this.ID = id;
+		this.lastName= lastName;      // variable should be meaningful
+		this.firstName = firstName;  // variable should be meaningful
+		this.email = email;         // variable should be meaningful
+		this.id = phoneNo; // variable should be meaningful
 		
 		this.LNS = new HashMap<>();
 	}
@@ -31,9 +30,9 @@ public class member implements Serializable {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Member:  ").append(ID).append("\n")
-		  .append("  Name:  ").append(LN).append(", ").append(FN).append("\n")
-		  .append("  Email: ").append(EM).append("\n")
-		  .append("  Phone: ").append(PN)
+		  .append("  Name:  ").append(lastName).append(", ").append(FN).append("\n")
+		  .append("  Email: ").append(Email).append("\n")
+		  .append("  Phone: ").append(phoneNo)
 		  .append("\n")
 		  .append(String.format("  Fines Owed :  $%.2f", FINES))
 		  .append("\n");
@@ -76,7 +75,7 @@ public class member implements Serializable {
 
 	
 	public String getLastName() {
-		return LN;
+		return lastName;
 	}
 
 	
